@@ -2,32 +2,32 @@
 #include <stdlib.h>
 
 float letraA() {
-    float y = 0;
-    float x = 0.1;
+    float Y = 0;
+    float X = 0.1;
 
     for(int i = 0; i < 99; i++) {
-        y += x;
+        Y += X;
     }
     
-    return y;
+    return Y;
 }
 
 double letraB() {
-    double y = 0;
-    double x = 0.1;
+    double Y = 0;
+    double X = 0.1;
 
     for(int i = 0; i < 99; i++) {
-        y += x;
+        Y += X;
     }
 
-    return y;
+    return Y;
 }
 
 int main () {
-    // Letra A, com valores em Float.
+    // Definir X e Y como variáveis do tipo Float.
     printf("%f\n", letraA());
 
-    // Letra B, com valores em Double.
+    // Definir X e Y como variáveis do tipo Double.
     printf("%f\n", letraB());
     
     return 0;
