@@ -5,7 +5,7 @@ float letraA() {
     float Y = 0;
     float X = 0.1;
 
-    for(int i = 0; i < 99; i++) {
+    for(int i = 0; i <= 99; i++) {
         Y += X;
     }
     
@@ -15,11 +15,9 @@ float letraA() {
 double letraB() {
     double Y = 0;
     double X = 0.1;
-
-    for(int i = 0; i < 99; i++) {
+    for(int i = 0; i <= 99; i++) {
         Y += X;
     }
-
     return Y;
 }
 
