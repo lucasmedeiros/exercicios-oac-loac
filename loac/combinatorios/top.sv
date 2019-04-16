@@ -1,6 +1,3 @@
-// DESCRIPTION: Verilator: Systemverilog example module
-// with interface to switch buttons, LEDs, LCD and register display
-
 parameter NINSTR_BITS = 32;
 parameter NBITS_TOP = 8, NREGS_TOP = 32;
 module top(input  logic clk_2,
