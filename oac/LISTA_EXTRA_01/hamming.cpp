@@ -20,6 +20,7 @@ int* getDadosRecebidos(int* dados) {
   cout << "Digite os bits dos dados recebidos na transmissão um por um:" << endl;
 
   for (int i = 0; i < 7; i++) {
+    cout << "Bit" << (i + 1) << ": ";
     cin >> dados[i];
   }
 
