@@ -32,7 +32,7 @@ void calculaParidade(int* dados) {
   dados[3] = dados[0] ^ dados[1] ^ dados[2];
 }
 
-void imprimeArrayBits(int *dados, int tamanho) {
+void imprimeArrayBits(int* dados, int tamanho) {
   for (int i = 0; i < tamanho; i++) {
     cout << dados[i];
   }
@@ -48,7 +48,7 @@ int calculaCoeficiente(int* dadosRecebidos) {
   return c3*4 + c2*2 + c1;
 }
 
-void corrige(int *recebidos, int c) {
+void corrige(int* recebidos, int c) {
   if (recebidos[7 - c] == 0) {
     recebidos[7 - c] = 1;
   } else {
