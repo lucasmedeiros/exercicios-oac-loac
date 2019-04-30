@@ -50,11 +50,7 @@ int calculaCoeficiente(int* dadosRecebidos) {
 }
 
 void corrige(int* recebidos, int c) {
-  if (recebidos[7 - c] == 0) {
-    recebidos[7 - c] = 1;
-  } else {
-    recebidos[7 - c] = 0;
-  }
+  recebidos[7 - c] == 0 ? recebidos[7 - c] = 1 : recebidos[7 - c] = 0;
 }
 
 void imprimeResultadoHamming(int c, int* enviados, int* recebidos) {

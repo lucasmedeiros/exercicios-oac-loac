@@ -33,7 +33,7 @@ void calculaParidade(int* dados) {
   dados[3] = dados[0] ^ dados[1] ^ dados[2];
 }
 
-void imprimeArrayBits(int *dados, int tamanho) {
+void imprimeArrayBits(int* dados, int tamanho) {
   for (int i = 0; i < tamanho; i++) {
     cout << dados[i];
   }
