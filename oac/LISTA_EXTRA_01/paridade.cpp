@@ -41,19 +41,18 @@ void imprimeArrayBits(int* dados, int tamanho) {
   cout << endl << endl;
 }
 
-int calculaCoeficiente(int* dadosRecebidos) {
-  int c1 = dadosRecebidos[6] ^ dadosRecebidos[4] ^ dadosRecebidos[2] ^ dadosRecebidos[0];
-  int c2 = dadosRecebidos[5] ^ dadosRecebidos[3] ^ dadosRecebidos[1] ^ dadosRecebidos[0];
-  int c3 = dadosRecebidos[3] ^ dadosRecebidos[2] ^ dadosRecebidos[1] ^ dadosRecebidos[0];
+void imprimeResultado(int* enviados, int* recebidos, int tamanho) {
+  bool iguais = true;
+  int i = 0;
 
-  return c3*4 + c2*2 + c1;
-}
+  while(enviados[i] == recebidos[i] && i < tamanho) {
+    i++;
+  }
 
-void imprimeResultado(int c, int* enviados, int* recebidos) {
-  if (c == 0) {
+  if (i == tamanho) {
     cout << "Nenhum erro detectado na transmissão!" << endl;
   } else {
-    cout << "Erro detectdo!" << endl;
+    cout << "Erro detectado!" << endl;
 
     cout << "Dados enviados: " << endl;
     imprimeArrayBits(enviados, 7);
@@ -74,8 +73,7 @@ int main() {
   int dadosRecebidos[7];
   int* ponteiroDadosRecebidos = getDadosRecebidos(dadosRecebidos);
 
-  int c = calculaCoeficiente(ponteiroDadosRecebidos);
-  imprimeResultado(c, ponteiroDadosEnviados, ponteiroDadosRecebidos);
+  imprimeResultado(ponteiroDadosEnviados, ponteiroDadosRecebidos, 7);
 
   return 0;
 }

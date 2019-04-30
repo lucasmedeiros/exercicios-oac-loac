@@ -12,7 +12,7 @@ int* getDadosEnviados(int* dados) {
     cout << "Bit " << (i + 1) << ": ";
     cin >> dados[i];
   }
-
+  
   return dados;
 }
 
@@ -57,7 +57,7 @@ void imprimeResultadoHamming(int c, int* enviados, int* recebidos) {
   if (c == 0) {
     cout << "Nenhum erro detectado na transmissão!" << endl;
   } else {
-    cout << "Erro detectdo!" << endl;
+    cout << "Erro detectado!" << endl;
 
     cout << "Dados enviados: " << endl;
     imprimeArrayBits(enviados, 7);
