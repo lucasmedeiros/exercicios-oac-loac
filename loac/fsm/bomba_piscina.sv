@@ -1,33 +1,3 @@
-/**
-* 
-* Questão: "Bomba de filtro"
-* 
-* Implemente o circuito de controle da bomba de filtro de uma
-* piscina. A bomba pode ser alimentada por painéis solares ou pela
-* rede elétrica. A bomba deve ser ligada para prover filtragem da
-* piscina em média 1 segundo a cada 2 segundos.
-*
-* ➔ Entradas: clock – 1 Hz, aparecendo em LED[7], reset – assíncrono
-* em SWI[0], sol – incidência solar suficiente em SWI[1]
-* ➔ Saídas: painel – liga bomba aos paineis solares em LED[0], rede –
-* liga bomba na rede elétrica em LED[1]
-*
-* No reset, as saídas ficam em 0. Quando houver incidência solar
-* suficiente, a bomba deve ser ligada aos painéis solares durante 1
-* segundo a cada 2 segundos (1 segundo ligado, 1 segundo desligado).
-* Quando não houver incidência solar suficiente, a bomba pode ficar
-* desligada. Se após 2 segundos desligado a incidência voltar a ficar
-* suficiente, a bomba deve ser ligada durante 2 segundos. Se após 3
-* segundos desligado a incidência solar voltar a ficar suficiente, a
-* bomba deve ser ligada durante 3 segundos. Se a bomba não pode ser
-* ligada nos painéis solares durante mais do que 3 segundos, ligue-a na
-* rede. Quando a incidência solar voltar a ser suficiente, volte a operar
-* pelos painéis solares.
-*
-* Aluno: Lucas de Medeiros Nunes Fernandes
-* Matrícula: 117110210
-*/
-
 parameter NINSTR_BITS = 32;
 parameter NBITS_TOP = 8, NREGS_TOP = 32, NBITS_LCD = 64;
 module top(input  logic clk_2,

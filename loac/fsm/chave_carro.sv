@@ -1,20 +1,3 @@
-/**
-*
-* Questão: Chave do carro
-*
-* Os carros contemporâneos possuem um dispositivo de segurança que identifica o código presente na chave utilizada para ligá-los.
-* Caso o código da chave não seja o mesmo que está codificado no computador de bordo, o carro não liga. Isso é feito, grosso modo,
-* com um chip na chave que responde ao computador de bordo, informando o seu código, quando solicitado. Este chip é, na verdade,
-* um circuito sequencial. Construa este circuito sequencial, considerando uma chave codificada com o código de 4 bits “1011”. O
-* circuito sequencial possui um sinal de entrada a e um sinal de saída r. O sinal a vale “1” quando o código está sendo requisitado
-* pelo computador de bordo do carro. Quando isto ocorrer, o circuito sequencial envia o código (“1011”, no caso) pela saída r de
-* maneira serial (i.e., um bit por clock/estado), começando pelo bit menos significativo (LSB).
-*
-*
-* Aluno: Lucas de Medeiros Nunes Fernandes
-* Matrícula: 117110210
-*/
-
 parameter NINSTR_BITS = 32;
 parameter NBITS_TOP = 8, NREGS_TOP = 32, NBITS_LCD = 64;
 module top(input  logic clk_2,

@@ -1,29 +1,3 @@
-/**
-* 
-* Questão: "Caixa Eletrônico"
-* 
-* Implemente o circuito de um caixa eletrônico. No reset, as
-* saídas ficam em 0. Depois do usuário inserir o cartão no caixa,
-* ele precisa colocar o código de acesso, formado pelos valores 1,
-* 3 e 7. O usuário pode demorar quanto tempo quiser para
-* iniciar a colocação do código e pode demorar o quanto tempo
-* quiser de um valor para o próximo, mas precisa pelo menos
-* demorar 1 ciclo de clock para cada valor. Depois do código
-* estiver recebido corretamente, o dinheiro sai. A saída do
-* dinheiro demora 1 ciclo de clock. Após três tentativas
-* fracassadas de colocar o código correto, o cartão é destruído.
-* Isso demora 1 ciclo de clock.
-* ➔ Entradas: clock – 1 Hz, aparecendo em LED[7], reset –
-* assíncrono em SWI[0], cartão – o usuário inseriu um cartão
-* no caixa em SWI[1], código de acesso – valores de 0 à 7 em
-* SWI[6:4]
-* ➔ Saídas: dinheiro – saída de dinheiro em LED[0], destrói –
-* destruição do cartão em LED[1]
-*
-* Aluno: Lucas de Medeiros Nunes Fernandes
-* Matrícula: 117110210
-*/
-
 parameter NINSTR_BITS = 32;
 parameter NBITS_TOP = 8, NREGS_TOP = 32, NBITS_LCD = 64;
 module top(input  logic clk_2,
